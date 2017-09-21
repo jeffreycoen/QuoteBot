@@ -117,7 +117,7 @@ def perform_sentiment():
         plt.savefig("PlotBot.png")
         
         # Create a status update
-        #api.update_with_media("PlotBot.png", "Sentiment analysis of " + target_user + ".  Thanks " + tweet_author + "!!")
+        api.update_with_media("PlotBot.png", "Sentiment analysis of " + target_user + ".  Thanks " + tweet_author + "!!")
         print('Thanks ' + tweet_author + '!!')
         
 while(True):

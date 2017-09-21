@@ -1,7 +1,9 @@
 # Dependencies
+
+import matplotlib.pyplot as plt
+matplotlib.use('Agg')
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import json
 import tweepy
 import time
@@ -34,7 +36,7 @@ def find_me():
     target_term = "@jeffrey_coen"
     
     # Search for all tweets
-    public_tweets = api.search(target_term, count=3, result_type="recent")
+    public_tweets = api.search(target_term, count=1, result_type="recent")
 
    # Loop through all public_tweets
     for tweet in public_tweets["statuses"]:
@@ -117,7 +119,7 @@ def perform_sentiment():
         plt.savefig("PlotBot.png")
         
         # Create a status update
-        #api.update_with_media("PlotBot.png", "Sentiment analysis of " + target_user + ".  Thanks " + tweet_author + "!!")
+        api.update_with_media("PlotBot.png", "Sentiment analysis of " + target_user + ".  Thanks " + tweet_author + "!!")
         print('Thanks ' + tweet_author + '!!')
         
 while(True):

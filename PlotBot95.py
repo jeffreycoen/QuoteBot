@@ -79,9 +79,9 @@ def perform_sentiment():
         # Counter
         counter = 0
 
-        # Variables for holding sentiments
-        sentiments = []
-
+        # Variables for holding sentiments, and resetting it
+        sentiments = ['']
+        
         # Loop through 5 pages of tweets (total 100 tweets)
         for x in range(25):
 
@@ -102,7 +102,6 @@ def perform_sentiment():
             
         # Convert sentiments to DataFrame
         sentiments_pd = pd.DataFrame.from_dict(sentiments)
-        sentiments_pd.head()
 
         print("There were " + str(counter) + ' tweets analyzed for sentiment')
 
@@ -118,7 +117,7 @@ def perform_sentiment():
         plt.savefig("PlotBot.png")
         
         # Create a status update
-        api.update_with_media("PlotBot.png", "Sentiment analysis of " + target_user + ".  Thanks " + tweet_author + "!!")
+        #api.update_with_media("PlotBot.png", "Sentiment analysis of " + target_user + ".  Thanks " + tweet_author + "!!")
         print('Thanks ' + tweet_author + '!!')
         
 while(True):

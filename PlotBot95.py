@@ -1,13 +1,13 @@
 # Dependencies
-
-import matplotlib.pyplot as plt
+import matplotlib
 matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import json
 import tweepy
 import time
-#import seaborn as sns
+import seaborn as sns
 
 # Initialize Sentiment Analyzer
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
@@ -45,7 +45,6 @@ def find_me():
         tweet_id = tweet["id"]
         tweet_author = tweet["user"]["screen_name"]
         tweet_text = tweet["text"]
-        print(tweet_text)
         
         # Split the tweet 
         targeted_user = tweet_text.split()

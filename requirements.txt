@@ -1,1 +1,5 @@
 Tweepy == 3.5.0
+Pandas == 0.20.1
+Seaborn == 0.7.1
+vaderSentiment == 2.5
+Matplotlib == 2.0.2

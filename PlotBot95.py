@@ -79,9 +79,9 @@ def perform_sentiment():
         # Counter
         counter = 0
 
-        # Variables for holding sentiments, and resetting it
-        sentiments = ['']
-        
+        # Variables for holding sentiments
+        sentiments = []
+
         # Loop through 5 pages of tweets (total 100 tweets)
         for x in range(25):
 
@@ -102,6 +102,7 @@ def perform_sentiment():
             
         # Convert sentiments to DataFrame
         sentiments_pd = pd.DataFrame.from_dict(sentiments)
+        sentiments_pd.head()
 
         print("There were " + str(counter) + ' tweets analyzed for sentiment')
 
@@ -124,14 +125,3 @@ while(True):
     find_me()
     perform_sentiment()
     time.sleep(300)
-
-
-
-
-
-
-
-
-
-
-

@@ -1,1 +1,2 @@
 tweepy == 3.5.0
+Tkinter == 3.0
